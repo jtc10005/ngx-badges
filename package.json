@@ -1,5 +1,5 @@
 {
-  "name": "ngx-badges-demo",
+  "name": "ngx-badges",
   "version": "0.0.0-development",
   "scripts": {
     "ng": "ng",
@@ -9,6 +9,7 @@
     "build:lib": "npm run copy:readme && ng build ngx-badges",
     "build:showcase": "ng build ng-badges-showcase --base-href='https://jtc10005.github.io/ngx-badges/'",
     "publish:demo": "npx angular-cli-ghpages --dir=./dist/ng-badges-showcase",
+    "test:lib-coverage": "ng test ng-alert --code-coverage --watch=false",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -45,6 +46,7 @@
     "@angular/compiler-cli": "~11.2.6",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
+    "codecov": "^3.8.3",
     "codelyzer": "^6.0.0",
     "copyfiles": "^2.4.1",
     "husky": "^8.0.1",
@@ -59,10 +61,10 @@
     "ng-packagr": "^11.0.0",
     "prettier": "^2.6.2",
     "protractor": "~7.0.0",
+    "semantic-release": "^19.0.2",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~4.1.5",
-    "semantic-release": "^19.0.2"
+    "typescript": "~4.1.5"
   },
   "repository": {
     "type": "git",
