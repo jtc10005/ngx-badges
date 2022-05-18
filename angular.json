@@ -3,5 +3,166 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "ngx-badges": {
+      "projectType": "library",
+      "root": "projects/ngx-badges",
+      "sourceRoot": "projects/ngx-badges/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ngx-badges/tsconfig.lib.json",
+            "project": "projects/ngx-badges/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-badges/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-badges/src/test.ts",
+            "tsConfig": "projects/ngx-badges/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-badges/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-badges/tsconfig.lib.json",
+              "projects/ngx-badges/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ng-badges-showcase": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/ng-badges-showcase",
+      "sourceRoot": "projects/ng-badges-showcase/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ng-badges-showcase",
+            "index": "projects/ng-badges-showcase/src/index.html",
+            "main": "projects/ng-badges-showcase/src/main.ts",
+            "polyfills": "projects/ng-badges-showcase/src/polyfills.ts",
+            "tsConfig": "projects/ng-badges-showcase/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/ng-badges-showcase/src/favicon.ico",
+              "projects/ng-badges-showcase/src/assets"
+            ],
+            "styles": [
+              "projects/ng-badges-showcase/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/ng-badges-showcase/src/environments/environment.ts",
+                  "with": "projects/ng-badges-showcase/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ng-badges-showcase:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ng-badges-showcase:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ng-badges-showcase:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-badges-showcase/src/test.ts",
+            "polyfills": "projects/ng-badges-showcase/src/polyfills.ts",
+            "tsConfig": "projects/ng-badges-showcase/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-badges-showcase/karma.conf.js",
+            "assets": [
+              "projects/ng-badges-showcase/src/favicon.ico",
+              "projects/ng-badges-showcase/src/assets"
+            ],
+            "styles": [
+              "projects/ng-badges-showcase/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-badges-showcase/tsconfig.app.json",
+              "projects/ng-badges-showcase/tsconfig.spec.json",
+              "projects/ng-badges-showcase/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/ng-badges-showcase/e2e/protractor.conf.js",
+            "devServerTarget": "ng-badges-showcase:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ng-badges-showcase:serve:production"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ngx-badges"
 }
