@@ -11,7 +11,7 @@ Simple badge module for Angular 2.
 <li>default</li>
 </ul>
 
-<img src='./images/sampleImage.PNG' />
+<img src='https://github.com/jtc10005/ngx-badges/blob/21789a8936c525eb5601312b8bdd3665ce1c67d9/images/sampleImage.png' />
 
 ### How to use:
 From NPM run: `npm i ngx-badges --save`   
