@@ -13,6 +13,7 @@
     "test:lib-coverage": "ng test ngx-badges --code-coverage --watch=false",
     "publish:lib": "npm run build:lib:prod && cd dist/ngx-badges && npm pack && npm publish --ignore-scripts",
     "test": "ng test",
+    "test:lib": "ng test ngx-badges --browsers ChromeHeadless --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "semantic-release": "semantic-release"
