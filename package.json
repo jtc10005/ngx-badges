@@ -1,6 +1,17 @@
 {
   "name": "ngx-badges",
   "version": "0.0.0-development",
+  "description": "badge component for Angular",
+  "keywords": [
+    "Angular 2",
+    "badges"
+  ],
+  "author": "J. Culpepper",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jtc10005/ngx-badges/issues"
+  },
+  "homepage": "https://github.com/jtc10005/ngx-badges/blob/main/README.md",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
