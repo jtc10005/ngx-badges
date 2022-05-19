@@ -1,27 +1,50 @@
-# NgxBadgesDemo
+### ngx-badges
+___
+Simple badge module for Angular 2.
+### There are several different badge stylings:
+<ul>
+<li>primary</li>
+<li>error</li>
+<li>info</li>
+<li>warn</li>
+<li>success</li>
+<li>default</li>
+</ul>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
+<img src='./images/sampleImage.PNG' />
 
-## Development server
+### How to use:
+From NPM run: `npm i ngx-badges --save`   
+Add to your module imports. Ex...
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgxBadgesModule } from 'projects/ngx-badges/src/public-api';
+import { AppComponent } from './app.component';
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule, NgxBadgesModule
+  ],
+```
 
-## Build
+Add to component HTML: 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+PRIMARY: <ngx-badges text="PRIMARY" type="PRIMARY"></ngx-badges>
+SUCCESS: <ngx-badges text="SUCCESS" type="SUCCESS"></ngx-badges>
+WARN: <ngx-badges text="WARN" type="WARN"></ngx-badges>
+ERROR: <ngx-badges text="ERROR" type="ERROR"></ngx-badges>
+INFO: <ngx-badges text="INFO" type="INFO"></ngx-badges>
+DEFAULT: <ngx-badges text="DEFAULT" type="DEFAULT"></ngx-badges>
+``` 
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+text is the text to appear in the badge.
+type is the stylings to be applied to the badge.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
