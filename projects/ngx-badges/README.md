@@ -1,24 +1,52 @@
-# NgxBadges
+[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.14.
+### ngx-badges
+___
+Simple badge module for Angular 2.
+### There are several different badge stylings:
+<ul>
+<li>primary</li>
+<li>error</li>
+<li>info</li>
+<li>warn</li>
+<li>success</li>
+<li>default</li>
+</ul>
 
-## Code scaffolding
+<img src='https://github.com/jtc10005/ngx-badges/blob/21789a8936c525eb5601312b8bdd3665ce1c67d9/images/sampleImage.png' />
 
-Run `ng generate component component-name --project ngx-badges` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-badges`.
-> Note: Don't forget to add `--project ngx-badges` or else it will be added to the default project in your `angular.json` file. 
+### How to use:
+From NPM run: `npm i ngx-badges --save`   
+Add to your module imports. Ex...
 
-## Build
+```
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgxBadgesModule } from 'projects/ngx-badges/src/public-api';
+import { AppComponent } from './app.component';
 
-Run `ng build ngx-badges` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Publishing
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule, NgxBadgesModule
+  ],
+```
 
-After building your library with `ng build ngx-badges`, go to the dist folder `cd dist/ngx-badges` and run `npm publish`.
+Add to component HTML: 
 
-## Running unit tests
+```
+PRIMARY: <ngx-badges text="PRIMARY" type="PRIMARY"></ngx-badges>
+SUCCESS: <ngx-badges text="SUCCESS" type="SUCCESS"></ngx-badges>
+WARN: <ngx-badges text="WARN" type="WARN"></ngx-badges>
+ERROR: <ngx-badges text="ERROR" type="ERROR"></ngx-badges>
+INFO: <ngx-badges text="INFO" type="INFO"></ngx-badges>
+DEFAULT: <ngx-badges text="DEFAULT" type="DEFAULT"></ngx-badges>
+``` 
 
-Run `ng test ngx-badges` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Further help
+text is the text to appear in the badge.
+type is the stylings to be applied to the badge.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

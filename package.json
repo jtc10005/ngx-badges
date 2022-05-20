@@ -16,7 +16,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "npm run build:lib && npm run build:showcase",
-    "copy:readme": "copyfiles ./README.md ./dist/ngx-badges",
+    "copy:readme": "copyfiles ./README.md ./projects/ngx-badges && copyfiles ./README.md ./dist/ngx-badges",
     "build:lib": "npm run copy:readme && ng build ngx-badges",
     "build:lib:prod": "npm run copy:readme && npx ng run ngx-badges:build --configuration=production",
     "build:showcase": "ng build ng-badges-showcase --base-href='https://jtc10005.github.io/ngx-badges/'",
