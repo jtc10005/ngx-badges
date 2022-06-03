@@ -1,7 +1,7 @@
 
 ### ngx-badges
 ___
-Simple badge module for Angular 2.
+Simple badge module for Angular 12.
 ### There are several different badge stylings:
 <ul>
 <li>primary</li>
