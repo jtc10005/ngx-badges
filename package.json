@@ -6,6 +6,10 @@
     "Angular",
     "badges"
   ],
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=14.15.0"
+  },
   "author": "J. Culpepper",
   "license": "ISC",
   "bugs": {
@@ -42,26 +46,26 @@
     ]
   },
   "dependencies": {
-    "@angular/animations": "13.3.11",
-    "@angular/common": "13.3.11",
-    "@angular/compiler": "13.3.11",
-    "@angular/core": "13.3.11",
-    "@angular/forms": "13.3.11",
-    "@angular/platform-browser": "13.3.11",
-    "@angular/platform-browser-dynamic": "13.3.11",
-    "@angular/router": "13.3.11",
+    "@angular/animations": "14.0.0",
+    "@angular/common": "14.0.0",
+    "@angular/compiler": "14.0.0",
+    "@angular/core": "14.0.0",
+    "@angular/forms": "14.0.0",
+    "@angular/platform-browser": "14.0.0",
+    "@angular/platform-browser-dynamic": "14.0.0",
+    "@angular/router": "14.0.0",
     "rxjs": "6.6.7",
     "tslib": "2.4.0",
     "zone.js": "0.11.5"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "13.3.7",
-    "@angular/cli": "13.3.7",
-    "@angular/compiler-cli": "13.3.11",
+    "@angular-devkit/build-angular": "14.0.0",
+    "@angular/cli": "14.0.0",
+    "@angular/compiler-cli": "14.0.0",
     "@types/jasmine": "3.10.6",
     "@types/node": "12.20.54",
     "codecov": "3.8.3",
-    "codelyzer": "6.0.2",
+    "codelyzer": "^0.0.28",
     "copyfiles": "2.4.1",
     "husky": "8.0.1",
     "jasmine-core": "3.6.0",
@@ -72,7 +76,7 @@
     "karma-jasmine": "4.0.2",
     "karma-jasmine-html-reporter": "1.5.0",
     "lint-staged": "12.4.1",
-    "ng-packagr": "13.3.1",
+    "ng-packagr": "14.0.0",
     "prettier": "2.6.2",
     "protractor": "7.0.0",
     "semantic-release": "19.0.2",
