@@ -22,7 +22,7 @@
     "build": "npm run build:lib && npm run build:showcase",
     "copy:readme": "copyfiles ./README.md ./projects/ngx-badges && copyfiles ./README.md ./dist/ngx-badges",
     "build:lib": "npm run copy:readme && ng build ngx-badges",
-    "build:lib:prod": "npm run copy:readme && npx ng run ngx-badges:build --configuration=production",
+    "build:lib:prod": "npm run copy:readme && npx ng build ngx-badges --configuration=production",
     "build:showcase": "ng build ng-badges-showcase --base-href='https://jtc10005.github.io/ngx-badges/'",
     "publish:demo": "npx angular-cli-ghpages --dir=./dist/ng-badges-showcase",
     "test:lib-coverage": "ng test ngx-badges --code-coverage --watch=false",
