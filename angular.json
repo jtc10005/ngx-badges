@@ -28,18 +28,6 @@
             "tsConfig": "projects/ngx-badges/tsconfig.spec.json",
             "karmaConfig": "projects/ngx-badges/karma.conf.js"
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/ngx-badges/tsconfig.lib.json",
-              "projects/ngx-badges/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     },
@@ -140,19 +128,6 @@
               "projects/ng-badges-showcase/src/styles.scss"
             ],
             "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/ng-badges-showcase/tsconfig.app.json",
-              "projects/ng-badges-showcase/tsconfig.spec.json",
-              "projects/ng-badges-showcase/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         },
         "e2e": {
