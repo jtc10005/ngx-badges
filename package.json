@@ -6,9 +6,9 @@
     "Angular",
     "badges"
   ],
-  "engines" : { 
-    "npm" : ">=7.0.0",
-    "node" : ">=14.15.0"
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=14.15.0"
   },
   "author": "J. Culpepper",
   "license": "ISC",
@@ -65,7 +65,7 @@
     "@types/jasmine": "3.10.6",
     "@types/node": "12.20.54",
     "codecov": "3.8.3",
-    "codelyzer": "6.0.2",
+    "codelyzer": "^0.0.28",
     "copyfiles": "2.4.1",
     "husky": "8.0.1",
     "jasmine-core": "3.6.0",
